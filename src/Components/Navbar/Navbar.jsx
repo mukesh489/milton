@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion} from "framer-motion"
 
 const Navbar = () => {
   return (
@@ -12,9 +13,19 @@ const Navbar = () => {
         <span className="hover:underline hover:text-black cursor-pointer">FAQs</span>
         <span className="hover:underline hover:text-black cursor-pointer">Blog</span>
       </div>
-      <div className="flex gap-2 font-semibold">
-        <button className="bg-[#f1f2f4] px-4 py-2 text-[#2e2e2e] rounded-lg">Log in</button>
-        <button className="bg-[#2e2e2e] px-4 py-2 text-[#f1f2f4] rounded-lg">Get Started</button>
+      <div className="flex gap-4 font-semibold">
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          transition={{layout:{duration:1.2}}}
+          className="bg-[#f1f2f4] px-4 py-2 text-[#2e2e2e] rounded-lg"
+        >Log in
+        </motion.button>
+        <motion.button 
+          whileHover={{ scale: 1.1 }}
+          transition={{layout:{duration:1.2}}}
+          className="bg-[#2e2e2e] px-4 py-2 text-[#f1f2f4] rounded-lg"
+          >Get Started
+          </motion.button>
       </div>
     </div>
   )
